@@ -1,0 +1,32 @@
+<%# monday is 1 %>  
+<%= l @beginning_of_the_day %>  
+<%= @first_day_of_week %>  
+<div class="calendar">
+	<div class="days-of-week">
+		<div class="day-block">Monday</div>
+		<div class="day-block">Tuesday</div>
+		<div class="day-block">Wednesday</div>
+		<div class="day-block">Thursday</div>
+		<div class="day-block">Friday</div>
+		<div class="day-block">Saturday</div>
+		<div class="day-block">Sunday</div>
+	</div>
+	<div class="days-of-month">
+    <% @first_day_of_week = 6 if @first_day_of_week == 0 %>  
+    <% while @first_day_of_week > 1 %>  
+      <div class="day-block">---</div>
+      <% @first_day_of_week -= 1 %>  
+    <% end %>
+
+    <% (1..31).each do |d| %>  
+      <div class="day-block">
+        <div class="day-number">
+          <%= d %>
+        </div>
+        pippo pluto e paperino
+      </div>
+    <% end %>
+	</div>
+</div>
+
+

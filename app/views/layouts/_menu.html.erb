@@ -1,0 +1,26 @@
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg">  
+  <%= link_to root_path, class: "navbar-brand text-info" do %>
+    LabSched <%= current_user.current_organization.description %>  
+  <% end %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <% if policy(:course).index? %>  
+        <li class="nav-item"><%= link_to 'corsi', courses_path, class: 'nav-link' %></li>
+      <% end %>
+      <% if policy(:lab).index? %>  
+        <li class="nav-item"><%= link_to 'labs', labs_path, class: 'nav-link' %></li>
+      <% end %>
+      <% if policy(:organization).index? %>  
+        <li class="nav-item"><%= link_to 'organizations', organizations_path, class: 'nav-link' %></li>
+      <% end %>
+      <% if policy(:user).index? %>  
+        <li class="nav-item"><%= link_to 'utenti', users_path, class: 'nav-link' %></li>
+      <% end %>
+    </ul>
+  </div>
+</nav>
+
+

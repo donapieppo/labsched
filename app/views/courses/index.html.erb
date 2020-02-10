@@ -1,0 +1,9 @@
+<h1><%= current_user.current_organization %></h1>
+
+<ul>
+  <% @courses.each do |course| %>  
+    <li>
+      <%= course.code %> - <%= course.name %>
+    </li>
+  <% end %>
+</ul>

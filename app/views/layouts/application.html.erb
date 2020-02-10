@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <title>LabSched</title>
+
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, shrink-to-fit=no, user-scalable=yes"/>
+    <meta name="description" content="LabSched"/>
+    <meta property="og:description" content=""/>
+    <meta name="keywords" content=""/>
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_pack_tag 'application' %>
+    <%= javascript_pack_tag 'application' %>
+  </head>
+
+  <body>
+    <%= render(partial: 'layouts/menu') unless @no_menu %>
+    <div class="container-fluid">
+      <%= yield %>
+    </div>
+  </body>
+</html>

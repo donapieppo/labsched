@@ -1,0 +1,10 @@
+<h1>LABS</h1>
+
+<ul>
+  <% @labs.each do |lab| %>  
+    <li><%= link_to lab.name, [:edit, lab] %></li>
+  <% end %>
+</ul>
+
+
+<%= link_to 'nuovo', new_lab_path %>  

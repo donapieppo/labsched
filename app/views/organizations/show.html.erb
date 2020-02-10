@@ -1,0 +1,9 @@
+<h1><%= @organization %></h1>
+
+<ul>
+  <% @organization.courses.each do |course| %>  
+    <li><%= link_to course, course %> </li>
+  <% end %>
+</ul>
+
+

@@ -1,0 +1,27 @@
+@import '~bootstrap/scss/bootstrap'; 
+
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts'; 
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+
+// @import url('https://fonts.googleapis.com/css?family=Roboto:100,400,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700&display=swap");
+
+@import "variables";
+@import "dm";
+
+$yellow-color: #ff9e2c;
+$green-color: #9cba7e;
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  // font-family: 'Roboto', sans-serif;
+  font-family: 'Raleway', sans-serif;
+}
+
+@import "calendar";
+
+

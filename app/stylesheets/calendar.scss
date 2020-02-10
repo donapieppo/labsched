@@ -1,0 +1,30 @@
+//Total width divided by days in a week
+$day-block-width: 100%/7;
+
+.calendar {
+  .days-of-week, .days-of-month {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .day-block {
+      flex-basis: $day-block-width;
+      text-align: center;
+      box-sizing: border-box;
+      border: 1px solid black;
+      padding: 1em;
+      .day-number {
+        @extend .badge;
+        @extend .badge-primary;
+        font-size: 100%;
+        padding: 5px;
+      }
+    }
+  }
+
+  .days-of-week {
+    .day-block {
+      background-color: #ccc;
+    }
+  }
+}
