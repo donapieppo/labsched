@@ -1,0 +1,21 @@
+<h1><%= @course %></h1>
+
+<h2><%= @lab %></h2>
+
+<%= dm_form_for @schedule do |s| %>  
+  <%= s.input :course_id, as: :hidden %>  
+  <%= s.input :lab_id, as: :hidden %>  
+  <%= s.input :start_time, as: :date_html5, label: 'Inizio'  %>  
+  <%= s.input :end_time, as: :date_html5, label: 'Fine'  %>  
+  <%= s.input :start_time, as: :time, minute_step: 15 %>  
+  <%= s.input :end_time, as: :time, minute_step: 15 %>  
+
+  <%= s.input :days, as: :check_boxes, collection: Schedule.weekdays %>  
+
+  <%# <% Schedule.weekdays.each do |day| %1> %>
+  <%#    <%= check_box :schedule, :days, { multiple: true }, day.downcase, nil %1> <%= day.downcase %1> %>
+  <%# <% end %1> %>
+
+  <%= s.submit %>  
+<% end %> 
+

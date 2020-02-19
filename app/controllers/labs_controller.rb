@@ -6,6 +6,9 @@ class LabsController < ApplicationController
     authorize @labs
   end
 
+  def show
+  end
+
   def new
     @lab = Lab.new
     authorize @lab

@@ -3,6 +3,10 @@ class LabPolicy < ApplicationPolicy
     true
   end
 
+  def show?
+    true
+  end
+
   def create?
     @user && @user.cesia?
   end

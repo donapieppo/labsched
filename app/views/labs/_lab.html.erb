@@ -1,0 +1,8 @@
+<%= dm_card title: lab.name do %>  
+  <dl class='dl-horizontal'>
+    <dt>studenti</dt>
+    <dd><%= lab.student_number %></dd>
+  </dl> 
+
+  <%= link_to_edit([:edit, lab]) if policy(lab).edit? %>  
+<% end %>

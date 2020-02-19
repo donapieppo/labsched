@@ -1,6 +1,8 @@
-<%= dm_form_for @lab, title: "Lab" do |lab| %>  
+<%= dm_form_for @course, title: "Corso" do |lab| %>  
   <%= lab.input :code %>  
   <%= lab.input :name %>  
+  <%= lab.input :hours %>  
   <%= lab.input :student_number %>  
   <%= lab.submit %>  
 <% end %>
+

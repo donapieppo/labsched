@@ -1,9 +1,9 @@
 <h1><%= current_user.current_organization %></h1>
 
-<ul>
+<div class="row">
   <% @courses.each do |course| %>  
-    <li>
-      <%= course.code %> - <%= course.name %>
-    </li>
+    <div class="col-md-4">
+      <%= render course %>  
+    </div>
   <% end %>
-</ul>
+</div>

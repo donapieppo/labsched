@@ -1,9 +1,9 @@
 <h1>Organizations</h1>
 
-<ul>
+<div class="list-group">
   <% @organizations.each do |organization| %>  
-    <li><%= link_to organization, organization %></li>
+    <%= link_to organization, organization, class: 'list-group-item list-group-item-action' %>
   <% end %>
-</ul>
+</div>
 
 

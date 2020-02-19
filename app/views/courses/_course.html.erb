@@ -1,0 +1,15 @@
+<%= dm_card title: course.name do %>  
+  <dl class='dl-horizontal'>
+    <dt>codice</dt>
+    <dd><%= course.code %></dd>
+    <dt>docente</dt>
+    <dd><%= course.user %></dd>
+    <dt>studenti</dt>
+    <dd><%= course.student_number %></dd>
+    <dt>totale ore</dt>
+    <dd><%= course.hours %></dd>
+  </dl> 
+
+  <%= link_to_edit([:edit, course]) if policy(course).edit? %>  
+<% end %>
+

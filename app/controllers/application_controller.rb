@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
 
   impersonates :user
 
-  before_action :log_current_user, :set_locale, :set_organization # , :redirect_unsigned_user, :retrive_authlevels
+  before_action :log_current_user, :set_locale, :set_organization, :retrive_authlevels # , :redirect_unsigned_user, :retrive_authlevels
   # before_action :log_current_user, :set_locale, :set_organization, :redirect_unsigned_user, :retrive_authlevels
 
   def set_locale

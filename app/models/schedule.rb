@@ -1,4 +1,4 @@
-# wrapper in db for ice_tea.
+# wrapper in db for ice_tea.
 # on initializ and save updates start_time and end_time accordingly
 class Schedule < ApplicationRecord
   belongs_to :course
@@ -19,6 +19,12 @@ class Schedule < ApplicationRecord
 
   def end_time
     self.ical.end_time
+  end
+
+  attr_accessor :days
+  serialize :days
+  def self.weekdays
+    Date::DAYNAMES.map { |d| d.upcase }
   end
 
   private

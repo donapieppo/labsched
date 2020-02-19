@@ -1,10 +1,10 @@
 <h1>LABS</h1>
 
-<ul>
+<div class="row">
   <% @labs.each do |lab| %>  
-    <li><%= link_to lab.name, [:edit, lab] %></li>
+    <div class="col-md-4">
+      <%= render lab %>  
+    </div>
   <% end %>
-</ul>
+</div>
 
-
-<%= link_to 'nuovo', new_lab_path %>  
